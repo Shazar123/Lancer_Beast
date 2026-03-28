@@ -2,14 +2,19 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "LancerBeast — Stop wasting connects on Upwork",
+  title: "LancerBeast — Stop spending $100s on connects that won't hire you",
   description:
-    "LancerBeast analyzes every Upwork job in milliseconds, scam detection, client trust score, and your personal hire probability. Before you bid.",
+    "LancerBeast analyzes every Upwork job in milliseconds — scam detection, client trust score, and your personal hire probability. Before you bid.",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://lancerbeast.com"
   ),
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+  },
   openGraph: {
-    title: "LancerBeast — Stop wasting connects",
+    title: "LancerBeast — Stop wasting connects on Upwork",
     description:
       "Know if a client is real, detect scams, and see your hire probability before you spend a single connect.",
     type: "website",
