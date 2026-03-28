@@ -24,3 +24,14 @@ export async function GET() {
     return NextResponse.json({ count: ((seed * 7 + 13) % 27) + 2 });
   }
 }
+export async function POST(req: Request) {
+  try {
+    const body = await req.json();
+    
+    // your logic here (store visitor, etc.)
+
+    return Response.json({ success: true });
+  } catch (err) {
+    return Response.json({ error: "Server error" }, { status: 500 });
+  }
+}
